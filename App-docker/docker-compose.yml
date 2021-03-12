@@ -15,8 +15,7 @@ services:
             MYSQL_ROOT_PASSWORD: "root"
             MYSQL_HOST: localhost
             MYSQL_DATABASE: "Agenda"
-            MYSQL_USER: "admin"
-            MYSQL_PASSWORD: "admin"
+            MYSQL_USER: "root"
         
     app-agenda:
         image: app-agenda
@@ -29,6 +28,6 @@ services:
         depends_on: 
             - "bd-agenda"
         environment: 
-            DB_CONNECTION_STRING: "server=contenedor-bd;user=admin;password=admin;database=Agenda"
+            DB_CONNECTION_STRING: "server=bd-agenda;user=admin;password=admin;database=Agenda"
 volumes:
     volumen-agenda:
